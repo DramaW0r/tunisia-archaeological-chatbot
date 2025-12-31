@@ -69,7 +69,7 @@ ChromaDB   Ollama/Llama3
 
 **1. Clone and setup environment**
 ```bash
-git clone https://github.com/yourusername/tunisia-archaeological-chatbot.git
+git clone https://github.com/DramaW0r/tunisia-archaeological-chatbot.git
 cd tunisia-archaeological-chatbot
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
