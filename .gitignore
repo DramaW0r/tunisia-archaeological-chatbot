@@ -1,0 +1,171 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+
+# Data directories - DO NOT COMMIT
+data/chroma_db/
+data/chat_history.db
+data/processed/*.jsonl
+
+# Keep directory structure
+!data/processed/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+```
+4. Commit: `chore: add gitignore for data and generated files`
+
+#### **Create `data/processed/.gitkeep`**
+1. Click **"Add file"** → **"Create new file"**
+2. Name: `data/processed/.gitkeep`
+3. Content:
+```
+# This directory is for your corpus.jsonl file
+# The .gitkeep file ensures Git tracks this empty directory
+```
+4. Commit: `chore: add data directory structure`
+
+---
+
+### **2. Update the README**
+
+1. Click on `README.md` (if it exists)
+2. Click the pencil icon (Edit)
+3. **Replace entire content** with the comprehensive README I provided earlier
+4. Commit: `docs: add comprehensive README with setup guide`
+
+Or if README doesn't exist:
+1. Click **"Add file"** → **"Create new file"**
+2. Name: `README.md`
+3. Paste the full README content
+4. Commit: `docs: create comprehensive README`
+
+---
+
+### **3. Add documentation files**
+
+#### **Create `CONTRIBUTING.md`**
+- Path: `CONTRIBUTING.md`
+- Content: *(paste the CONTRIBUTING.md I provided earlier)*
+- Commit: `docs: add contributing guidelines`
+
+#### **Create `SECURITY.md`**
+- Path: `SECURITY.md`
+- Content: *(paste the SECURITY.md I provided)*
+- Commit: `docs: add security policy`
+
+#### **Create `CODE_OF_CONDUCT.md`**
+- Path: `CODE_OF_CONDUCT.md`
+- Content: *(paste the CODE_OF_CONDUCT.md I provided)*
+- Commit: `docs: add code of conduct`
+
+---
+
+### **4. Set up issue templates**
+
+#### **Create bug report template**
+1. Path: `.github/ISSUE_TEMPLATE/bug_report.md`
+2. Content: *(paste bug_report.md I provided)*
+3. Commit: `chore: add bug report template`
+
+#### **Create feature request template**
+1. Path: `.github/ISSUE_TEMPLATE/feature_request.md`
+2. Content: *(paste feature_request.md I provided)*
+3. Commit: `chore: add feature request template`
+
+---
+
+### **5. Configure repository settings**
+
+Go to **Settings** → **General**:
+
+#### **About section** (top right of repo page)
+- Click the ⚙️ (gear icon)
+- **Description:** 
+```
+  🏛️ AI-powered chatbot for exploring Tunisian archaeological sites using RAG with Llama3, ChromaDB & Streamlit
+```
+- **Website:** Leave blank or add your demo URL
+- **Topics:** Add these tags:
+```
+  rag chatbot llm tunisia archaeology llama3 chromadb streamlit 
+  vector-search embeddings ai nlp semantic-search heritage ollama python
+```
+- ✅ **Check:** "Releases"
+- ✅ **Check:** "Packages"
+- Click **Save changes**
+
+#### **Features**
+- ✅ Wikis
+- ✅ Issues
+- ✅ Discussions (optional)
+- ✅ Projects (optional)
+
+---
+
+## 🎯 Quick Action Summary
+
+**Right now on the upload page:**
+
+1. ❌ **Remove these from upload:**
+   - `data/chat_history.db`
+   - All `data/chroma_db/*` files
+   - `data/processed/corpus.jsonl`
+
+2. ✅ **Keep only:**
+   - `app.py`
+   - `database.py`
+   - `ingest.py`
+   - `rag.py`
+
+3. 📝 **Commit message:**
+```
+   feat: add core application files
+   
+   - Add Streamlit UI (app.py)
+   - Add RAG chatbot logic (rag.py)
+   - Add database management (database.py)
+   - Add data ingestion pipeline (ingest.py)
+```
+
+4. 🚀 **Click "Commit changes"**
+
+---
+
+## 📊 File Structure After Proper Setup
+
+Your repository should look like this:
+```
+tunisia-archaeological-chatbot/
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       ├── bug_report.md
+│       └── feature_request.md
+├── data/
+│   └── processed/
+│       └── .gitkeep          # Tracks empty directory
+├── .gitignore                # Prevents data upload
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE                   # Should already exist (MIT)
+├── README.md                 # Comprehensive guide
+├── SECURITY.md
+├── app.py                    # ✓ Uploaded
+├── database.py               # ✓ Uploaded
+├── ingest.py                 # ✓ Uploaded
+├── rag.py                    # ✓ Uploaded
+└── requirements.txt
